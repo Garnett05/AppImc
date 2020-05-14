@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppIMC.MainPage">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" HeightRequest="50" BackgroundColor="LightGreen" >
+            <Label Text="IMC Calculator" HorizontalOptions="CenterAndExpand" FontSize="24" TextColor="Black" VerticalOptions="Center" />
+            <Image Source="add.png" HorizontalOptions="End" Margin="7" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ActionCleanScreen" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="user.png" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" HeightRequest="160" />
+            <Entry Placeholder="Weight(kg)" HorizontalOptions="FillAndExpand" x:Name="entryWeight" />
+            <Entry Placeholder="height(m)" HorizontalOptions="FillAndExpand" x:Name="entryHeight" />
+            <Button Text="Calculate" Clicked="ActionShowResult" />
+            <Label x:Name="lblResult" FontSize="24" TextColor="Black" HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
